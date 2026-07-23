@@ -1,0 +1,48 @@
+.hazard-section {
+  background-color: var(--color-off-white);
+  padding: var(--space-8) 0;
+}
+
+.map-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* Increased gap for spacious layout */
+}
+
+@media (min-width: 768px) {
+  .map-grid {
+    flex-direction: row;
+  }
+}
+
+.map-card {
+  flex: 1;
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: none;
+}
+
+.map-title {
+  padding: 1rem;
+  background-color: var(--color-muted-navy);
+  color: white;
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 0;
+}
+
+.map-image-wrapper {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-off-white);
+  display: block;
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

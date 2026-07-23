@@ -1,0 +1,123 @@
+.first-aid-section {
+  background-color: var(--color-bg-light-gray);
+  padding: 4rem 0;
+}
+
+.first-aid-main-title {
+  color: var(--color-text-dark) !important;
+  margin-bottom: 2rem;
+}
+
+.first-aid-intro {
+  background-color: #F3F4F0;
+  border-left: 4px solid var(--color-muted-navy);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 0 auto 3rem;
+  max-width: 800px;
+  color: var(--color-text-dark);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  box-shadow: var(--shadow-soft);
+}
+
+.first-aid-intro p {
+  margin: 0;
+}
+
+.first-aid-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .first-aid-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.first-aid-card {
+  background-color: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-soft);
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-aid-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.first-aid-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(49, 130, 206, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted-navy);
+  flex-shrink: 0;
+}
+
+.first-aid-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.first-aid-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-muted-navy);
+}
+
+.first-aid-list {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.first-aid-list li {
+  margin-bottom: 0.25rem;
+}
+
+.first-aid-warning {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: #FFF7ED;
+  border-radius: var(--radius-md);
+  color: var(--color-text-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-left: 4px solid var(--color-warm-amber);
+}
+
+.first-aid-warning .callout-title {
+  color: var(--color-warm-amber);
+  font-weight: 800;
+}
+
+.first-aid-list.ordered-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.first-aid-list.ordered-list li::marker {
+  font-weight: 700;
+  color: var(--color-muted-navy);
+}

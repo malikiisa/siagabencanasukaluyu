@@ -1,0 +1,20 @@
+/* App.css is intentionally left mostly empty as we use index.css for globals and utilities */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 3rem 0;
+  }
+}

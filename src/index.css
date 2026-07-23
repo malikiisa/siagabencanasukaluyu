@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Accessible Earthy Palette */
+  --color-off-white: #F9F9F6;
+  --color-muted-navy: #3182CE;
+  --color-warm-amber: #E25822;
+  --color-warning-yellow: #D69E2E;
+  --color-crimson-red: #E25822;
+  --color-emerald-green: #2F855A;
+  --color-text-dark: #2D3748;
+  --color-text-muted: #6B7280;
+  --color-bg-light-gray: #F9F9F6;
+  
+  /* Spacing System (8px based) */
+  --space-1: 0.5rem;    /* 8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 2.5rem;    /* 40px */
+  --space-6: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+  --space-12: 6rem;     /* 96px */
+  
+  /* Component Defaults */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+  
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-off-white);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* Utilities */
+.bg-odd {
+  background-color: var(--color-off-white);
+}
+
+.bg-even {
+  background-color: #F0F4F8; /* slate-50 */
+}
+
+/* Massive Vertical Padding & Subtle Horizontal Divider */
+section {
+  padding: var(--space-12) 0 !important;
+  border-bottom: 1px solid #E2E8F0;
+}
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* Ensure inner cards remain white */
+.bg-even .map-card,
+.bg-even .kit-card,
+.bg-even .first-aid-card,
+.bg-even .contact-btn,
+.bg-even .mitigation-intro-box,
+.bg-even .tab-content,
+.bg-even .reference-links,
+.bg-odd .map-card,
+.bg-odd .kit-card,
+.bg-odd .first-aid-card,
+.bg-odd .contact-btn,
+.bg-odd .mitigation-intro-box,
+.bg-odd .tab-content,
+.bg-odd .reference-links {
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.text-center { text-align: center; }
+
+.section-title {
+  color: var(--color-muted-navy);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: var(--space-5);
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--space-3);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background-color: var(--color-warm-amber);
+  border-radius: var(--radius-pill);
+}
+@media (min-width: 768px) {
+  .section-title { font-size: 2.5rem; }
+}
+
+.btn-primary {
+  background-color: var(--color-warm-amber);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1.25rem 2.5rem; /* Chunky UI */
+  border-radius: var(--radius-xl);
+  display: inline-block;
+  box-shadow: 0 6px 12px -2px rgba(226, 88, 34, 0.25);
+}
+.btn-primary:hover {
+  background-color: #C04313;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -2px rgba(226, 88, 34, 0.35);
+}
