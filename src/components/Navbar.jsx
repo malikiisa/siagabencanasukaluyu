@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container container">
         <div className="navbar-logo">
-          <a href="#">Siaga Bencana Desa Sukaluyu</a>
+          <a href="#">Siaga Bencana Sukaluyu</a>
         </div>
 
         {/* Desktop Menu */}
